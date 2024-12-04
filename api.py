@@ -12,6 +12,8 @@ from dlx import DB as DLX
 from dlx.file import File as DLXFile, Identifier
 from xml.dom import minidom
 
+from mangum import Mangum
+
 # Change this to reflect updates to your environment
 class Config(object):
     client = boto3.client('ssm')
@@ -142,3 +144,5 @@ def get_symbol_data(symbol: str):
         
     print(return_data)
     return return_data
+
+handler = Mangum(app=app)

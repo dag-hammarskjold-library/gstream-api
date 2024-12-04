@@ -10,7 +10,6 @@ RUN yum install -y git-all
 # Copy the requirements file and install dependencies
 COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
-RUN pip install git+https://github.com/dag-hammarskjold-library/gdoc-api@948317cd38c91c9a4f0baece13e6eba883beb294
 
 # Copy the rest of the application code
 COPY . .
